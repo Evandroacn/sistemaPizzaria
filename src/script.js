@@ -118,6 +118,15 @@ botaoEdit.addEventListener("click", (e) => {
         }
     }
 
+    if (nPedido === '' || nPedido === null || nPedido <= 0) {
+        erro("NPEDIDO");
+        return;
+    }
+    if (indiceDoPedido === -1) {
+        erro("NAOENCONTRADO");
+        return;
+    }
+
     let pedidoAntigo = pedidos[indiceDoPedido];
 
     let attPedido = {
@@ -127,15 +136,6 @@ botaoEdit.addEventListener("click", (e) => {
         tamanho: tamanho !== 'selecioneTamanho' ? tamanho : pedidoAntigo.tamanho,
         observacao: obs !== '' ? obs : pedidoAntigo.observacao
     };
-
-    if (nPedido === '' || nPedido === null || nPedido <= 0) {
-        erro("NPEDIDO")
-        return;
-    }
-    if (indiceDoPedido === -1) {
-        erro("NAOENCONTRADO")
-        return;
-    }
 
     pedidos.splice(indiceDoPedido, 1, attPedido);
     renderizaLista();
