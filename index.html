@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Pizza</title>
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-[#141414] text-zinc-100">
+    <header>
+        <div class="container mx-auto max-w-lg px-4 mb-6 flex justify-center items-center h-20 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl">
+            <div class="flex">
+                <a href="" class="text-5xl"><span class="text-orange-500">Our</span> Pizza</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container mx-auto max-w-lg px-4 mb-10 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl">
+            <h1 class="mb-4 text-3xl">Listagem dos Pedidos</h1>
+            <div class="max-h-[600px] overflow-y-auto pl-2">
+                <div id="card" class="card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mx-auto max-w-lg px-4 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mb-10">
+            <h1 class="text-3xl mb-4">Adiconar e Atualizar Pedido</h1>
+            <form action="" class="flex flex-col gap-2">
+                <label for="pedido">N° do Pedido (Apenas para edição)</label>
+                <input id="pedido" class="mb-2 p-2 bg-[#222222]" type="number" placeholder="Informe o n° do pedido">
+                <label for="mesa">N° da Mesa</label>
+                <input id="mesa" class="mb-2 p-2 bg-[#222222]" type="number" placeholder="Informe o n° da mesa">
+                <label for="sabor">Sabor da Pizza</label>
+                <select id="sabor" class="mb-2 p-2 bg-[#222222]">
+                    <option value="selecioneSabor" selected>Selecione uma opção</option>
+                    <option value="Frango c/ Catupiry">Frango c/ Catupiry</option>
+                    <option value="Frango c/CreamCheese">Frango c/ Cream Cheese</option>
+                    <option value="Camarao c/ Catupiry">Camarão c/ Catupiry</option>
+                    <option value="Camarao c/ CreamCheese">Camarão c/ Cream Cheese</option>
+                    <option value="Vegetariano">Vegetariano</option>
+                    <option value="Carbonara">Carbonara</option>
+                    <option value="Chocolate">Chocolate</option>
+                </select>
+                <label for="tamanho">Tamanho da Pizza</label>
+                <select id="tamanho" class="mb-2 p-2 bg-[#222222]">
+                    <option value="selecioneTamanho" selected>Selecione uma opção</option>
+                    <option value="Grande">Grande</option>
+                    <option value="Média">Média</option>
+                    <option value="Pequena">Pequena</option>
+                </select>
+                <label for="obs">Observação</label>
+                <textarea id="obs" class="mb-2 p-2 bg-[#222222]" placeholder="Informe as observações do pedido"></textarea>
+                <div class="flex justify-between gap-4 mt-4">
+                    <button class="btnAdc w-full border p-2 hover:border-green-500 hover:text-green-500">Adicionar Pedido</button>
+                    <button class="btnEdit w-full border p-2 hover:border-red-500 hover:text-red-500">Atualizar Pedido</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="flex justify-center items-center text-orange-500 p-4 bg-[#222222]">
+        <div class="container mx-auto flex justify-center items-center text-orange-500 p-4 bg-[#222222] max-w-lg px-4 sm:max-w-2xl md:max-w-4xl lg:max-w-5xl">Desenvolvido por Evandro Alves</div>
+    </footer>
+
+    <script src="src/criahtml.js"></script>
+    <script src="src/avisos.js"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>
